@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<Layout title="Home">
+  <SectionContainer id="home">
+    <div class="relative h-screen custom-bg">
+      <div class="">
+        <img
+          class="absolute inset-0 h-full w-full bg-fixed "
+          src="../../public/wp.jpg"
+          alt="fondo"
+        />
+      </div>
+      <div class="absolute inset-0 flex items-center ml-60">
+        <section class="text-start ml-32 mt-19 text-white">
+          <h1 class="text-4xl font-bold">ESTUDIO DE ABOGACIA</h1>
+          <h2 class="text-xl w-48">
+            Especialistas en Ley Comercial, Litigación, Insolvencia y Fraude
+          </h2>
+        </section>
+      </div>
+      <div class="absolute inset-0 custom-bg w-1/2"></div>
+      <div class="absolute inset-0 custom-bg w-1/2"></div>
+    </div>
+  </SectionContainer>
+</Layout>
+
+<style>
+  :root {
+    --color: 0, 48, 91;
+  }
+
+  .custom-bg {
+    background-color: rgba(var(--color), 0.7);
+  }
+</style>
