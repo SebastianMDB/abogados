@@ -1,0 +1,17 @@
+---
+const { className } = Astro.props;
+interface Props {
+  title: string;
+  content: string;
+  className?: string;
+}
+---
+
+<div class={`w-1/2 ${className}`}>
+  <header class="text-start">
+    <h2 class="text-xl font-bold">{Astro.props.title}</h2>
+  </header>
+  <main>
+    <h5 class="text-lg">{Astro.props.content}</h5>
+  </main>
+</div>
