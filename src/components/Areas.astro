@@ -1,64 +1,64 @@
 ---
+import Card from "./Card.astro";
+import SectionContainer from "./SectionContainer.astro";
 
+const items = [
+  {
+    title: "Derecho Civil",
+    contentList: ["Contratos", "Defensa Civil", "Propiedad", "Sucesiones"],
+  },
+  {
+    title: "Derecho Laboral",
+    contentList: [
+      "Contratos laborales",
+      "Relaciones laborales",
+      "Seguridad social",
+      "Normativas",
+    ],
+  },
+  {
+    title: "Derecho Comercial",
+    contentList: [
+      "Derechos de Sociedades",
+      "Contratos Comerciales",
+      "Litigios Comerciales",
+    ],
+  },
+  {
+    title: "Derecho Penal",
+    contentList: ["Defensa Penal", "Recursos Penales", "Derecho Penitenciario"],
+  },
+];
 ---
-
-<section id="areas-de-practica" class="bg-gray-100 mt-5 p-1">
-  <h1 class="text-3xl font-bold my-8 text-center">Áreas de Práctica</h1>
-
-  <section class="p-8 flex flex-wrap justify-center">
-    <!-- Derecho Civil -->
-    <div class="card bg-white p-5 m-5 w-64 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">Derecho Civil</h2>
-      <ul class="list-disc pl-6">
-        <li>Contratos: Elaboración, revisión y negociación.</li>
-        <li>Responsabilidad civil: Defensa en casos de daños.</li>
-        <li>Propiedad: Asesoramiento en temas inmobiliarios.</li>
-        <li>Sucesiones: Planificación sucesoria y testamentos.</li>
-      </ul>
-    </div>
-
-    <!-- Derecho Laboral -->
-    <div class="card bg-white p-5 m-5 w-64 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">Derecho Laboral</h2>
-      <ul class="list-disc pl-6">
-        <li>Conflictos laborales: Defensa en despidos y reclamaciones.</li>
-        <li>Relaciones laborales: Asesoramiento en negociaciones.</li>
-        <li>Seguridad Social: Asesoramiento en pensiones y beneficios.</li>
-        <li>Cumplimiento normativo: Asesoramiento en normativas laborales.</li>
-        <li>Asesoría educativa: Para docentes y personal educativo.</li>
-      </ul>
-    </div>
-
-    <!-- Derecho Comercial -->
-    <div class="card bg-white p-5 m-5 w-64 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">Derecho Comercial</h2>
-      <ul class="list-disc pl-6">
-        <li>
-          Derecho de sociedades: Asesoramiento en constitución y fusiones.
-        </li>
-        <li>Contratos comerciales: Elaboración y revisión de contratos.</li>
-        <li>Litigios comerciales: Defensa en disputas y incumplimientos.</li>
-      </ul>
-    </div>
-
-    <!-- Derecho Penal -->
-    <div class="card bg-white p-5 m-5 w-64 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">Derecho Penal</h2>
-      <ul class="list-disc pl-6">
-        <li>Defensa penal: Representación en procesos penales.</li>
-        <li>Recursos penales: Presentación de recursos y apelaciones.</li>
-        <li>Derecho penitenciario: Asesoramiento en ejecución de penas.</li>
-      </ul>
-    </div>
-  </section>
-</section>
-
-<style>
-  .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-</style>
+<SectionContainer id="areas-de-practica" className="p-10">
+  <header class="text-center mb-5">
+    <h1 class="text-3xl font-bold mb-3">Áreas de Práctica</h1>
+    <h2 class="text-xl">Especialistas en Ley Comercial, Litigación, Insolvencia, y Fraude</h2>
+  </header>
+  <div class="flex gap-5">
+    <img class="w-1/3" src="../../public/home.jpg" alt="" />
+    <Card
+      className="w-1/3 bg-gray-100"
+      title={items[0].title}
+      contentList={items[0].contentList}
+    />
+    <Card
+      className="w-1/3 bg-gray-100"
+      title={items[1].title}
+      contentList={items[1].contentList}
+    />
+  </div>
+  <div class="flex gap-20 mt-5">
+    <Card
+      className="w-1/3"
+      title={items[2].title}
+      contentList={items[2].contentList}
+    />
+    <Card
+      className="w-1/3"
+      title={items[3].title}
+      contentList={items[3].contentList}
+    />
+    <img class="w-1/3" src="../../public/home.jpg" alt="" />
+  </div>
+</SectionContainer>
