@@ -1,6 +1,4 @@
 ---
-import Title from "./Title.astro";
-import List from "./List.astro";
 const { className } = Astro.props;
 interface Props {
   title: string;
@@ -11,9 +9,15 @@ interface Props {
 
 <div class={`${className}`}>
   <header class="text-start">
-    <Title className="text-xl font-bold" title={Astro.props.title} />
+    <h2 class="text-xl font-bold">{Astro.props.title}</h2>
   </header>
   <main>
-    <List className={Astro.props.className} contentList={Astro.props.contentList} />
+    <ul>
+      {
+        Astro.props.contentList.map((content) => (
+          <li class="">{content}</li>
+        ))
+      }
+    </ul>
   </main>
 </div>
