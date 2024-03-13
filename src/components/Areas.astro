@@ -1,0 +1,76 @@
+---
+import Card from "./Card.astro";
+import SectionContainer from "./SectionContainer.astro";
+import Imagen from "./Imagen.astro";
+
+const items = [
+  {
+    title: "Derecho Civil",
+    contentList: ["Contratos", "Defensa Civil", "Propiedad", "Sucesiones"],
+  },
+  {
+    title: "Derecho Laboral",
+    contentList: [
+      "Contratos laborales",
+      "Relaciones laborales",
+      "Seguridad social",
+      "Normativas",
+    ],
+  },
+  {
+    title: "Derecho Comercial",
+    contentList: [
+      "Derechos de Sociedades",
+      "Contratos Comerciales",
+      "Litigios Comerciales",
+    ],
+  },
+  {
+    title: "Derecho Penal",
+    contentList: ["Defensa Penal", "Recursos Penales", "Derecho Penitenciario"],
+  },
+];
+---
+
+<SectionContainer id="areas-de-practica" className="p-32">
+  <header class="text-center mb-5">
+    <h1 class="text-3xl font-bold mb-3">Áreas de Práctica</h1>
+    <h2 class="text-xl text-neutral-400">
+      Especialistas en Ley Comercial, Litigación, Insolvencia, y Fraude
+    </h2>
+  </header>
+  <div class="flex gap-6">
+      <Imagen
+        className="w-1/3"
+        src="../../public/home.jpg"
+        alt="imagen de areas de practicas"
+      />
+    <Card
+      className="w-1/3"
+      title={items[0].title}
+      contentList={items[0].contentList}
+    />
+    <Card
+      className="w-1/3"
+      title={items[1].title}
+      contentList={items[1].contentList}
+    />
+  </div>
+  <div class="flex gap-6 mt-5">
+    <Card
+      className="w-1/3"
+      title={items[2].title}
+      contentList={items[2].contentList}
+    />
+    <Card
+      className="w-1/3"
+      title={items[3].title}
+      contentList={items[3].contentList}
+    />
+    <Imagen
+      className="w-1/3 h-auto"
+      src="../../public/home.jpg"
+      alt="imagen de areas de practicas"
+    />
+  </div>
+</SectionContainer>

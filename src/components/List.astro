@@ -1,0 +1,14 @@
+---
+interface Props {
+    contentList: string[];
+    className?: string;
+}
+---
+
+<ul class={`ml-10 mt-5 text-sky-950 ${Astro.props.className}`}>
+  {
+    Astro.props.contentList.map((content) => (
+      <li class="">{content}</li>
+    ))
+  }
+</ul>

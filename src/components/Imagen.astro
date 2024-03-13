@@ -1,0 +1,11 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  className?: string;
+}
+---
+
+<div class={`${Astro.props.className}`}>
+  <img src={Astro.props.src} alt={Astro.props.alt} />
+</div>

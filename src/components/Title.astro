@@ -1,0 +1,8 @@
+---
+interface Props {
+    title: string;
+    className?: string;
+}
+---
+
+<h2 class={`text-3xl font-bold text-sky-950 ${Astro.props.className}`}>{Astro.props.title}</h2>

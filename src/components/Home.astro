@@ -1,0 +1,15 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import Header from "../components/Header.astro";
+---
+
+<SectionContainer id="home" className="h-screen">
+  <Header />
+  <div class="bg-cover bg-center px-20 mt-2">
+    <img
+      src="../../public/home.jpg"
+      alt="Imagen de fondo"
+      class="filter brightness-75 rounded-md"
+    />
+  </div>
+</SectionContainer>

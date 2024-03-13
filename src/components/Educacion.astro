@@ -1,0 +1,89 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import CardEducation from "./CardEducation.astro";
+
+const items = [
+  {
+    title: "Derecho Laboral",
+    content:
+      "Asesorar laboralmente a educadores: contratos, conflictos, despidos y derechos.",
+  },
+  {
+    title: "Derecho Administrativo",
+    content: "Asesoría en normativas educativas y procesos administrativos.",
+  },
+  {
+    title: "Derecho Civil y Responsabilidad Civil",
+    content:
+      "Resolver conflictos civiles educativos, incluyendo reclamaciones, incumplimientos y disputas.",
+  },
+  {
+    title: "Derecho del Trabajo y Seguridad Social",
+    content:
+      "Asesorar en seguridad social, pensiones y normativas laborales educativas.",
+  },
+  {
+    title: "Derecho Administrativo Sancionador",
+    content: "Asesorar defensa ante sanciones educativas.",
+  },
+  {
+    title: "Litigios y Resolución Alternativa de Conflictos",
+    content: "Representación en litigios, mediación y arbitraje.",
+  },
+];
+---
+
+<SectionContainer id="educacion" className="p-20
+">
+  <h1 class="text-3xl font-bold mb-3 text-center">Educación</h1>
+  <div class="flex gap-5 p-10">
+    <p class="w-1/3 justify-self-center">
+      Nuestro estudio posee un departamento especializado en asesoría a
+      docentes, asistentes de la educación y sostenedores de establecimientos
+      educacionales que se caracteriza por ofrecer una amplia gama de servicios
+      legales destinados a atender las necesidades específicas de este sector.
+      Entre los servicios que otorga nuestro estudio se incluye:
+    </p>
+    <img
+      class="w-2/3"
+      src="../../public/home.jpg"
+      alt="imagen de areas de educacion"
+    />
+  </div>
+  <main class="p-20">
+    <div class="flex gap-6">
+      <CardEducation
+        className="w-1/3"
+        title={items[0].title}
+        content={items[0].content}
+      />
+      <CardEducation
+        className="w-1/3"
+        title={items[1].title}
+        content={items[1].content}
+      />
+      <CardEducation
+        className="w-1/3"
+        title={items[2].title}
+        content={items[2].content}
+      />
+    </div>
+    <div class="flex gap-6 mt-20">
+      <CardEducation
+        className="w-1/3"
+        title={items[3].title}
+        content={items[3].content}
+      />
+      <CardEducation
+        className="w-1/3"
+        title={items[4].title}
+        content={items[4].content}
+      />
+      <CardEducation
+        className="w-1/3"
+        title={items[5].title}
+        content={items[5].content}
+      />
+    </div>
+  </main>
+</SectionContainer>

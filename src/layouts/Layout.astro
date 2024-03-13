@@ -1,0 +1,20 @@
+---
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Confía en nuestro equipo de abogados especializados para asesoría legal, defensa en casos civiles, penales y laborales. Expertos en resolución de conflictos y representación legal. ¡Protegemos tus derechos con ética y compromiso!"
+    />
+    <meta name="keywords" content="Abogados, Defensa Legal, Derecho Penal, Derecho Laboral, Derecho Civil" />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,19 @@
+---
+import Title from "./Title.astro";
+import List from "./List.astro";
+const { className } = Astro.props;
+interface Props {
+  title: string;
+  contentList: string[];
+  className?: string;
+}
+---
+
+<div class={`bg-stone-50 ${className}`}>
+  <header class="text-start bg-emerald-300 rounded-e-lg w-1/2 mt-5 h-10 flex items-center">
+    <Title className="text-xl font-bold ml-10" title={Astro.props.title} />
+  </header>
+  <main>
+    <List className={Astro.props.className} contentList={Astro.props.contentList} />
+  </main>
+</div>

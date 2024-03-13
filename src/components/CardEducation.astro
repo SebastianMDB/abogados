@@ -1,0 +1,18 @@
+---
+import Title from "./Title.astro";
+const { className } = Astro.props;
+interface Props {
+  title: string;
+  content: string;
+  className?: string;
+}
+---
+
+<div class={`${className}`}>
+  <header class="text-start bg-emerald-300 mb-10 rounded-lg">
+    <Title className="text-xl font-bold text-center h-10" title={Astro.props.title} />
+  </header>
+  <main class="bg-emerald-300 rounded-lg h-20 flex items-center">
+    <h5 class="text-center">{Astro.props.content}</h5>
+  </main>
+</div>
