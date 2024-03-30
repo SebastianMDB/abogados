@@ -1,8 +1,9 @@
 ---
 interface Props {
+    key?: number;
     title: string;
     className?: string;
 }
 ---
 
-<h2 class={`text-3xl font-bold text-sky-950 ${Astro.props.className}`}>{Astro.props.title}</h2>
+<h2 class={`font-bold text-sky-950 ${Astro.props.className}`}>{Astro.props.title}</h2>

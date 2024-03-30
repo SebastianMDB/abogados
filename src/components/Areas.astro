@@ -40,11 +40,13 @@ const items = [
     </h2>
   </header>
   <div class="flex gap-6">
+    <div class="w-1/3">
       <Imagen
-        className="w-1/3"
+        className="w-auto h-60"
         src="../../public/home.jpg"
         alt="imagen de areas de practicas"
       />
+    </div>
     <Card
       className="w-1/3"
       title={items[0].title}
@@ -67,10 +69,12 @@ const items = [
       title={items[3].title}
       contentList={items[3].contentList}
     />
+    <div class="w-1/3">
     <Imagen
-      className="w-1/3 h-auto"
+      className="w-auto h-60"
       src="../../public/home.jpg"
       alt="imagen de areas de practicas"
     />
+  </div>
   </div>
 </SectionContainer>

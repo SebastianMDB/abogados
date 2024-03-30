@@ -6,6 +6,4 @@ interface Props {
 }
 ---
 
-<div class={`${Astro.props.className}`}>
-  <img src={Astro.props.src} alt={Astro.props.alt} />
-</div>
+<img class={`${Astro.props.className}`} src={Astro.props.src} alt={Astro.props.alt} />
