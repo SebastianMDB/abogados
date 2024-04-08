@@ -1,17 +1,12 @@
 ---
-
+const { className } = Astro.props;
 ---
-
-<header class="flex justify-between items-center">
-	<h1 class="text-3xl font-bold text-center ml-36">VMLAbogados</h1>
-  <nav class="bg-white text-right p-8 w-full">
-    <a href="#home" class="text-mg m-3 hover:text-emerald-500">Inicio</a>
-    <a href="#areas-de-practica" class="text-mg m-3 hover:text-emerald-500"
-      >Áreas de práctica</a
-    >
-    <a href="#educacion" class="text-mg m-3 hover:text-emerald-500">Educación</a>
-    <a href="#contacto" class="text-mg m-3 mr-52 hover:text-emerald-500"
-      >Contacto</a
-    >
+<header class=`${className} flex justify-between items-center text-center`>
+  <h1 class="text-3xl font-bold ml-5 sm:ml-10 lg:ml-20 xl:ml-36">VMLAbogados</h1>
+  <nav class="bg-white text-center mr-20 md:mx-10 p-2 sm:p-8 lg:pr-16 xl:pr-24 hidden sm:block">
+    <a href="#home" class="text-mg m-1 sm:m-3 hover:text-emerald-500">Inicio</a>
+    <a href="#areas-de-practica" class="text-mg m-1 sm:m-3 hover:text-emerald-500">Áreas de práctica</a>
+    <a href="#educacion" class="text-mg m-1 sm:m-3 hover:text-emerald-500">Educación</a>
+    <a href="#contacto" class="text-mg m-1 sm:m-3 hover:text-emerald-500 mr-5 sm:mr-3 lg:mr-0">Contacto</a>
   </nav>
 </header>

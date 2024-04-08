@@ -25,33 +25,34 @@ const items = [
 ];
 ---
 
-<SectionContainer id="educacion" className="p-20">
-  <h1 class="text-3xl font-bold mb-3 text-center">Educación</h1>
-  <section class="flex gap-20 p-10 text-justify">
-    <p class="w-1/3">
+<SectionContainer id="educacion" className="p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24">
+  <h1 class="text-3xl font-bold mb-3 text-center text-sky-950">Educación</h1>
+  <section class="flex flex-col gap-6 sm:flex-row sm:gap-20 p-5 text-justify">
+    <p class="w-full sm:w-1/3 text-sky-800">
       Nuestro estudio posee un departamento especializado en asesoría a
       docentes, asistentes de la educación y sostenedores de establecimientos
       educacionales que se caracteriza por ofrecer una amplia gama de servicios
       legales destinados a atender las necesidades específicas de este sector.
       Entre los servicios que otorga nuestro estudio se incluye:
     </p>
-    <div class="w-3/5">
+    <div class="w-full sm:w-2/3">
       <Imagen
-        className="w-full h-60"
+        className="w-full h-60 sm:h-auto hidden sm:block"
         src="../../public/wp.jpg"
         alt="imagen de educacion"
       />
     </div>
   </section>
-  <main class="p-10 grid grid-cols-3 grid-rows-2 gap-7">
+  <main class="p-5 grid grid-cols-1 sm:grid-cols-3 gap-5">
     {
       items.map((item, index) => (
         <Title
           key={index}
-          className="bg-emerald-300 rounded-xl h-14 flex justify-center items-center text-center text-sm"
+          className="bg-emerald-300 text-xl rounded-xl h-16 flex justify-center items-center text-center"
           title={item.title}
         />
       ))
     }
   </main>
 </SectionContainer>
+

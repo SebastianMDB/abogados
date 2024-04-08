@@ -7,10 +7,13 @@
       name="description"
       content="Confía en nuestro equipo de abogados especializados para asesoría legal, defensa en casos civiles, penales y laborales. Expertos en resolución de conflictos y representación legal. ¡Protegemos tus derechos con ética y compromiso!"
     />
-    <meta name="keywords" content="Abogados, Defensa Legal, Derecho Penal, Derecho Laboral, Derecho Civil" />
+    <meta
+      name="keywords"
+      content="Abogados, Defensa Legal, Derecho Penal, Derecho Laboral, Derecho Civil"
+    />
     <title>{Astro.props.title}</title>
   </head>
-  <body>
+  <body >
     <slot />
   </body>
 </html>
@@ -18,6 +21,8 @@
 <style is:global>
   html {
     scroll-behavior: smooth;
+    font-size: calc(12px + (20.56 - 14) * ((100dvw - 320px) / (2560 - 320)));
+    font-family: "Lato";
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -25,4 +30,17 @@
       scroll-behavior: auto;
     }
   }
+
+  body {
+    width: fit-content;
+    
+  }
+  
+  @font-face {
+    font-family: "Lato";
+    src: url("../../public/fonts/Lato-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+  }
+
 </style>

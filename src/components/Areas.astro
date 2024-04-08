@@ -31,50 +31,47 @@ const items = [
   },
 ];
 ---
-
-<SectionContainer id="areas-de-practica" className="p-32">
+<SectionContainer id="areas-de-practica" className="p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24">
   <header class="text-center mb-5">
-    <h1 class="text-3xl font-bold mb-3">Áreas de Práctica</h1>
-    <h2 class="text-xl text-neutral-400">
+    <h1 class="text-3xl font-bold mb-3 text-sky-950">Áreas de Práctica</h1>
+    <h2 class="text-xl text-sky-800 ">
       Especialistas en Ley Comercial, Litigación, Insolvencia, y Fraude
     </h2>
   </header>
-  <div class="flex gap-6">
-    <div class="w-1/3">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="w-full">
       <Imagen
-        className="w-auto h-60"
+        className="w-full h-60 sm:h-auto hidden sm:block"
         src="../../public/home.jpg"
-        alt="imagen de areas de practicas"
+        alt="imagen de áreas de prácticas"
       />
     </div>
     <Card
-      className="w-1/3"
+      className="w-full"
       title={items[0].title}
       contentList={items[0].contentList}
     />
     <Card
-      className="w-1/3"
+      className="w-full"
       title={items[1].title}
       contentList={items[1].contentList}
     />
-  </div>
-  <div class="flex gap-6 mt-5">
     <Card
-      className="w-1/3"
+      className="w-full"
       title={items[2].title}
       contentList={items[2].contentList}
     />
     <Card
-      className="w-1/3"
+      className="w-full"
       title={items[3].title}
       contentList={items[3].contentList}
     />
-    <div class="w-1/3">
-    <Imagen
-      className="w-auto h-60"
-      src="../../public/home.jpg"
-      alt="imagen de areas de practicas"
-    />
-  </div>
+    <div class="w-full">
+      <Imagen
+        className="w-full h-60 sm:h-auto hidden sm:block"
+        src="../../public/home.jpg"
+        alt="imagen de áreas de prácticas"
+      />
+    </div>
   </div>
 </SectionContainer>

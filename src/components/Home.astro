@@ -1,15 +1,25 @@
 ---
 import SectionContainer from "./SectionContainer.astro";
 import Header from "../components/Header.astro";
+import Imagen from "../components/Imagen.astro";
 ---
 
-<SectionContainer id="home" className="h-screen">
-  <Header />
-  <div class="bg-cover bg-center px-20 mt-2">
-    <img
+<SectionContainer id="home">
+  <Header className="h-20" />
+  <div>
+    <Imagen
+      className="w-full h-auto sm:h-96"
       src="../../public/home.jpg"
-      alt="Imagen de fondo"
-      class="filter brightness-75 rounded-md"
+      alt="imagen de aplicación"
     />
+  </div>
+  <div class="sm:hidden">
+    <div class="flex justify-center mt-10">
+      <button
+        class="bg-emerald-300 px-4 py-2 rounded-md hover:bg-emerald-400"
+      >
+        <a class="text-sky-950 font-bold" href="#contacto">Envianos tu caso</a>
+      </button>
+    </div>
   </div>
 </SectionContainer>
