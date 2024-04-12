@@ -6,18 +6,20 @@ import Imagen from "../components/Imagen.astro";
 
 <SectionContainer id="home">
   <Header className="h-20" />
-  <div>
+  <div class="relative w-full h-5/6 sm:h-96 aspect-w-16 aspect-h-9">
     <Imagen
-      className="w-full h-auto sm:h-96"
-      src="../../public/home.jpg"
+      className="object-cover w-full h-full grayscale"
+      src="../../public/home2.jpg"
       alt="imagen de aplicación"
     />
-  </div>
-  <div class="sm:hidden">
-    <div class="flex justify-center mt-10">
-      <button
-        class="bg-emerald-300 px-4 py-2 rounded-md hover:bg-emerald-400"
-      >
+    <div class="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-40">
+    </div>
+    <div class="absolute text-white inset-0 flex-col sm:hidden flex justify-end items-start mb-10 ml-10">
+      <h1 class="text-5xl font-bold mb-20">VMLAbogados</h1>
+      <h2 class="text-xl mb-20">
+        Especialistas en Ley Comercial, Litigación, Insolvencia, y Fraude
+      </h2>
+      <button class="bg-emerald-300 px-14 py-2 rounded-md hover:bg-emerald-900">
         <a class="text-sky-950 font-bold" href="#contacto">Envianos tu caso</a>
       </button>
     </div>
